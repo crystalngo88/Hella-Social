@@ -1,0 +1,26 @@
+{
+  "name": "hella-social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crystalngo88/Hella-Social.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crystalngo88/Hella-Social/issues"
+  },
+  "homepage": "https://github.com/crystalngo88/Hella-Social#readme",
+  "dependencies": {
+    "express-handlebars": "^3.0.0"
+  }
+}
