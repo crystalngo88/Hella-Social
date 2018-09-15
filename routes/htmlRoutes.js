@@ -19,7 +19,8 @@ module.exports = function(app) {
  
 
   app.get("/hi", passport.authenticate('basic', { session: false }),function(req, res) {
-    res.render("index", {});
+  
+    res.render("index", {user:req.user.userName});
   });
 //   // add route loads the add.html page,
 //   // where users can enter new characters to the db
