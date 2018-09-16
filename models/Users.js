@@ -15,6 +15,11 @@ var UserSchema = new mongoose.Schema({
   email:{
     type: String,
     required: true
+  },
+
+  interests:{
+      type: Array,
+      required: false
   }
 });
 
