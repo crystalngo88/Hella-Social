@@ -1,25 +1,24 @@
-var db = require("../models");
+var User = require("../models/Users");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
+  
   // Create a new example
   app.post("/api/user", function(req, res) {
     
-    db.User.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+    var user = new User({
+      userName: req.body.userName,
+      password: req.body.password,
+      email: req.body.email
+    });
+
+    user.save(function(err) {
+      if (err)
+        return res.send(err);
+  
+      res.json({ message: 'added' });
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+  
 };
