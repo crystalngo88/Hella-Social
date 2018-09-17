@@ -15,6 +15,7 @@ mongoose.connect('mongodb://localhost:27017/hella_socialdb')
 
 passport.use(new BasicStrategy(
   function(username, password, done) {
+<<<<<<< Updated upstream
     User.findOne({ userName: username }, function (err, user) {
       if (err) { return done(err); }
       if (!user) { return done(null, false); }
@@ -26,6 +27,21 @@ passport.use(new BasicStrategy(
     });
   }
 ));
+=======
+    db.User.findAll({
+      limit: 1,
+      where: {
+          email:username
+      }
+       }).then(function(entries){
+
+        // if (err) { return done(err); }
+        if (!entries[0].userName) { return done(null, false); }
+        if (entries[0].password != password) { return done(null, false); }
+        return done(null, entries[0]);
+    }); 
+  }));
+>>>>>>> Stashed changes
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

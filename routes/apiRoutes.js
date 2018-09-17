@@ -6,10 +6,15 @@ module.exports = function(app) {
   // Create a new example
   app.post("/api/user", function(req, res) {
     
+<<<<<<< Updated upstream
     var user = new User({
       userName: req.body.userName,
       password: req.body.password,
       email: req.body.email
+=======
+    db.User.create(req.body).then(function(dbExample) {
+      res.json(dbExample);
+>>>>>>> Stashed changes
     });
 
     user.save(function(err) {
