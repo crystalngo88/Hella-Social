@@ -19,6 +19,8 @@ module.exports = function(app) {
       res.json({ message: 'added' });
     });
   });
+  
+  var interests = ["music", "sports", "food", "movies", "LGBTQ+", "religion/spirituality", "THICC lifestyle", "technology", "academic", "family", "arts and literature","dating"];
 
   
 };
