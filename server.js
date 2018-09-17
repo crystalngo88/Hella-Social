@@ -2,12 +2,12 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-var passport = require('passport')
+var passport = require('passport');
   , LocalStrategy = require('passport-local').Strategy;
 var BasicStrategy = require('passport-http').BasicStrategy;
 var db = require("./models_old");
-var mongoose = require("mongoose")
-var User = require("./models/Users")
+var mongoose = require("mongoose");
+var User = require("./models/Users");
 var app = express();
 var PORT = process.env.PORT || 3000;
 // mongoose.connect('mongodb://localhost:27017/hella_socialdb')
