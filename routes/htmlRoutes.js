@@ -1,7 +1,7 @@
 // *********************************************************************************
 // html-routes.js - this file offers a set of routes for sending users to the various html pages
 // *********************************************************************************
-var interests = ["music", "sports", "food", "movies", "LGBTQ+", "religion/spirituality", "THICC lifestyle", "technology", "academic", "family", "arts and literature","dating"];
+var interests = ["music", "Stuff", "sports", "food", "movies", "LGBTQ+", "religion/spirituality", "THICC lifestyle", "technology", "academic", "family", "arts and literature","dating"];
 // Dependencies
 // =============================================================
 var path = require("path");
@@ -16,6 +16,8 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.render("index", {});
   });
+
+  
  
   app.get("/interestForm", function(req, res) {
     res.render("survey", {"interests":interests});
