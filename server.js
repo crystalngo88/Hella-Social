@@ -10,7 +10,7 @@ var mongoose = require("mongoose")
 var User = require("./models/Users")
 var app = express();
 var PORT = process.env.PORT || 3000;
-mongoose.connect('mongodb://localhost:27017/hella_socialdb')
+// mongoose.connect('mongodb://localhost:27017/hella_socialdb')
 
 
 passport.use(new BasicStrategy(
