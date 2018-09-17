@@ -20,6 +20,7 @@ var UserSchema = new mongoose.Schema({
   interests:{
       type: Array,
       required: false
+      
   }
 });
 

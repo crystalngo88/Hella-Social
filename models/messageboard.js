@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 // Making the messages schema
 var MessagesSchema = new mongoose.Schema({
-    subinterestID: {
+    interestID: {
       type: Integer,
       unique: true,
       required: true
