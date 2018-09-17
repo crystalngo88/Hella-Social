@@ -24,9 +24,9 @@ module.exports = function(app) {
   });
 //   // add route loads the add.html page,
 //   // where users can enter new characters to the db
-//   app.get("/add", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/add.html"));
-//   });
+  app.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/layouts/survey.html"));
+  });
 
 //   // all route loads the all.html page,
 //   // where all characters in the db are displayed
