@@ -7,14 +7,11 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
 
-    category: {
+    majorInterest: {
       type: DataTypes.STRING,
-      allowNull: false,
-      defaultValue: ""
+      allowNull:false
     }
   });
 
   return Interest;
 };
-
-
