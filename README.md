@@ -7,26 +7,14 @@ As a new user, create an account and select interests to save to the user profil
 As a returning user, selected interests will automatically display on the homepage as different tabs. When the user clicks each tab, a messageboard for that interest will be displayed and the user can participate in a conversation in that board. 
 
 # Built With
-MySQL
-Sequelize
-Handlebars
-Bootstrap
-jQuery
-javaScript
-HTML
-CSS
+MySQL, Sequelize, Handlebars, Bootstrap, jQuery, javaScript, HTML, CSS
 
 
 # Authors
-Grace Andrizzi
-Elena Belgum
-Alex Connolly
-Peter Macdonnell
-Crystal Ngo
+Grace Andrizzi, Elena Belgum, Alex Connolly, Peter Macdonnell, Crystal Ngo
 
 # License
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 # Acknowledgments
-Google
-StackOverflow
+Google and StackOverflow
