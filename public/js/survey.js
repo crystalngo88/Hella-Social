@@ -1,9 +1,11 @@
 //I DON'T KNOW WHY WE HAVE THE HTML AT THE BOTTOM HERE
 //WHAT DEPENDENCIES DO WE NEED ON THIS PAGE?
-//I DON'T KNOW HOW THIS WORKS. - ELENA
+/* <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> */
 
-// image gallery
 // init the state from the input
+console.log("this works")
 
 $(".image-checkbox").each(function () {
     if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
@@ -66,4 +68,4 @@ https://www.prepbootstrap.com/bootstrap-template/image-checkbox
     </label>
   </div>
 
-</div> */}
+</div> */
