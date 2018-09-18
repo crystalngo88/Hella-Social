@@ -16,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/hella_socialdb')
 passport.use(new BasicStrategy(
   function(username, password, done) {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     User.findOne({ userName: username }, function (err, user) {
       if (err) { return done(err); }
       if (!user) { return done(null, false); }
@@ -28,6 +29,8 @@ passport.use(new BasicStrategy(
   }
 ));
 =======
+=======
+>>>>>>> Stashed changes
     db.User.findAll({
       limit: 1,
       where: {
@@ -41,6 +44,9 @@ passport.use(new BasicStrategy(
         return done(null, entries[0]);
     }); 
   }));
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
