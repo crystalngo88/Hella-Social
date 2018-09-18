@@ -341,7 +341,8 @@ p {
 
 .footer-distributed .footer-center p{
 	display: inline-block;
-	color: #ffffff;
+  /* color: #ffffff; */
+  color: #92999f;
 	vertical-align: middle;
 	margin:0;
 }
