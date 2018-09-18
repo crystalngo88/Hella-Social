@@ -3,6 +3,10 @@
 	padding-right: 0 !important;
 }
 /*image gallery*/
+.image-responsive{
+	height: 500px;
+	width: 500px;
+}
 .image-checkbox {
 	cursor: pointer;
 	box-sizing: border-box;
