@@ -1,3 +1,21 @@
+{{!-- I'M ASSUMING WE NEED DEPENDENCIES AND LINKS HERE --}}
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hella Social Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/styles/styles.css" />
+    <!-- this link has no file -->
+    <!-- <link rel="stylesheet" type=text/css a href="assets/css/reset.css"> -->
+    <!-- this link has no file -->
+    <!-- <script src="assets/javascript/app.js"></script> -->
+    <!-- this link has no file -->
+</head>
+
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Hella Social Survey</h1>
@@ -6,12 +24,21 @@
 
     {{#each interests}}
 
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="q{{@index}}">
-      <label class="form-check-label" for="q{{@index}}">{{this}}</label>
-    </div>
+ <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <label class="image-checkbox">
+      <img class="img-responsive" src=""/>
+      <input type="checkbox" name="image[]" value="" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
 
     {{/each}}
+<div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="q2">
+            <label class="form-check-label" for="q2">sports</label>
+          </div>
+
+          <img src = "/images/sports.jpg" alt="sports img" style="width:150px;height:150px;">
 
     <!-- <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="q2">

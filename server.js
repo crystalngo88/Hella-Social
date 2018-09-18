@@ -1,87 +1,45 @@
-//what is this?
+// Requiring necessary npm packages
 var express = require("express");
 var bodyParser = require("body-parser");
+<<<<<<< HEAD
 var exphbs = require("express-handlebars");
-var passport = require('passport')
+var passport = require('passport');
   , LocalStrategy = require('passport-local').Strategy;
 var BasicStrategy = require('passport-http').BasicStrategy;
 var db = require("./models_old");
-var mongoose = require("mongoose")
-var User = require("./models/Users")
+var mongoose = require("mongoose");
+var User = require("./models/Users");
 var app = express();
 var PORT = process.env.PORT || 3000;
 // mongoose.connect('mongodb://localhost:27017/hella_socialdb')
+=======
+var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
+>>>>>>> 7681d6fbfc83a2e5fcc005775ae600a1593141f3
 
 
-passport.use(new BasicStrategy(
-  function(username, password, done) {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    User.findOne({ userName: username }, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) { return done(null, false); }
-      if (!user.verifyPassword(password)) { 
-        return done(null, false);
-       }else{
-        return done(null, user);
-       }
-    });
-  }
-));
-=======
-=======
->>>>>>> Stashed changes
-    db.User.findAll({
-      limit: 1,
-      where: {
-          email:username
-      }
-       }).then(function(entries){
+// Setting up port and requiring models for syncing
+var PORT = process.env.PORT || 8080;
+var db = require("./models");
 
-        // if (err) { return done(err); }
-        if (!entries[0].userName) { return done(null, false); }
-        if (entries[0].password != password) { return done(null, false); }
-        return done(null, entries[0]);
-    }); 
-  }));
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-// Middleware
+// Creating express app and configuring middleware needed for authentication
+var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+// Requiring our routes
+require("./routes/htmlRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
 
-// Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
-var syncOptions = { force: false };
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
-
-
-app.listen(PORT, function () {
-  console.log(
-    "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-    PORT,
-    PORT
-  );
+// Syncing our database and logging a message to the user upon success
+db.sequelize.sync({force: true}).then(function() {
+  app.listen(PORT, function() {
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+  });
 });
-
-module.exports = app;
-
