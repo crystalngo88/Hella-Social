@@ -44,7 +44,7 @@ $("#message-submit").on("click", function(event) {
         var row = $("<div>");
         row.addClass("message");
   
-        row.append("<p>" + data[i].user + " messaged.. </p>");
+        row.append("<p>" + data[i].user + " added... </p>");
         row.append("<p>" + data[i].body + "</p>");
         row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
   
