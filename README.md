@@ -15,7 +15,7 @@ Built with:
 MySQL, Sequelize, Handlebars, Bootstrap, jQuery, javaScript, HTML, CSS
 
 Authors:
-Grace AndrizziGithub Repo: https://github.com/adorkwithaspork <br>
+Grace Andrizzi: Github Repo: https://github.com/adorkwithaspork
 Elena Belgum: Github Repo - https://github.com/Counttalkula666
 Alex Connolly: Github Repo - https://AlexanderConnolly415
 Peter Macdonnell: Github Repo - https://github.com/PeterMacDonnell 

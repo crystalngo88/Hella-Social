@@ -35,9 +35,10 @@ module.exports = function(app) {
     console.log(req.user)
     
     res.render('survey', req.user);
-
-
-    
   });
+
+  app.get('/messageboardsTabbed', function(req, res){
+    res.sendFile(path.join(__dirname, "../public/messageboardsTabbed.html"));
+  })
 
 };
