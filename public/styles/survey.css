@@ -1,3 +1,4 @@
+
 .nopad {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -39,3 +40,33 @@
 .image-checkbox-checked .fa {
 	display: block !important;
 }
+
+.h1 {
+	color: #8f8f8f;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+
+}
+.h3 {
+	color: #8f8f8f;
+	font-size: 40px;
+	text-allign: center;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	color: #8f8f8f;
+	background: rgb(241, 209, 172)
+	font-size: 30px;
+	line-height: 1.8;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+  }
