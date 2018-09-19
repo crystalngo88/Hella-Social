@@ -18,7 +18,7 @@ these links need to be fixed
 <h2>Authors:</h2>
 <h4>Grace Andrizzi:</h4>Github Repo - https://github.com/adorkwithaspork
 <h4>Elena Belgum:</h4>Github Repo - https://github.com/Counttalkula666
-<h4>Alex Connolly:</h4>Github Repo - https://AlexanderConnolly415
+<h4>Alex Connolly:</h4>Github Repo - https://github.com/AlexanderConnolly415
 <h4>Peter Macdonnell:</h4>Github Repo - https://github.com/PeterMacDonnell 
 <h4>Crystal Ngo:</h4>Github Repo - https://github.com/crystalngo88
 
