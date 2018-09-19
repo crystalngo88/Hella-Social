@@ -11,7 +11,7 @@ body {
 
         /* Style the buttons inside the tab */
         .tab button {
-            background-color: inherit;
+            background-color: #ccc;
             float: left;
             border: none;
             outline: none;
@@ -37,4 +37,8 @@ body {
             padding: 6px 12px;
             border: 1px solid #ccc;
             border-top: none;
+        }
+
+        .selectedTab {
+            background-color: grey !important;
         }

@@ -20,11 +20,19 @@ $(".image-checkbox").each(function() {
   }
 });
 
+var interestsChosen = [];
+
 // sync the state to the input
 $(".image-checkbox").on("click", function(e) {
+  interestsChosen.push($(this).children(0).attr('data-name'));
   $(this).toggleClass("image-checkbox-checked");
   var $checkbox = $(this).find('input[type="checkbox"]');
   $checkbox.prop("checked", !$checkbox.prop("checked"));
-
   e.preventDefault();
 });
+
+$('.submitSurvey').on('click', function(){
+indow.location.href = '/messageboardsTabbed'  sessionStorage.clear();
+  sessionStorage.setItem("interests", JSON.stringify(interestsChosen));
+  w
+})
