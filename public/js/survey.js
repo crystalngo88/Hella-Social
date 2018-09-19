@@ -32,7 +32,7 @@ $(".image-checkbox").on("click", function(e) {
 });
 
 $('.submitSurvey').on('click', function(){
-indow.location.href = '/messageboardsTabbed'  sessionStorage.clear();
+  sessionStorage.clear();
   sessionStorage.setItem("interests", JSON.stringify(interestsChosen));
-  w
+  window.location.href = '/messageboardsTabbed'
 })
