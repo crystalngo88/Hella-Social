@@ -40,4 +40,13 @@ module.exports = function(app) {
     
   });
 
+  app.get("/messageboardsTabbed", function(req, res) {
+    console.log(req.user)
+    
+    res.render('/messageboardsTabbed.html', req.user);
+
+
+    
+  });
+
 };
