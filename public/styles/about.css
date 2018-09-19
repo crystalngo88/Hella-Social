@@ -1,0 +1,20 @@
+.h3 {
+	color: #8f8f8f;
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+}
+
+.body {
+	color: #8f8f8f;
+	background: rgb(241, 209, 172);
+	font-size: 20px;
+	line-height: 1.8;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+  }
