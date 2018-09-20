@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var addMessage = require("../public/js/addMessage");
+var addMessage = require("./js/addMessage");
 var Message = require("../models/message");
 
 
@@ -30,15 +30,13 @@ module.exports = function (app) {
     // Add a message to message board
     app.post("/api/new", function (req, res) {
 //take the request
-        var message = req.body;
-        //not creating dynamic routes
-        console.log("Message Data:");
-        console.log('req.body',req.body);
+       
 
        //add a message to the database using sequelize 
         Message.create({
-            user: message.user,
-            message: message.message,
+            
+            user: req.body.user,
+            message: req.body.message,
         }).then(function (results) {
             // `results` here would be the newly created message'post'
             res.end();

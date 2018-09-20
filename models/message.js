@@ -1,3 +1,9 @@
+//petah
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references our connection to the DB.
+var sequelize = require("../config/config.json");
+
+
 // Creating our Messages model
 module.exports = function(sequelize, DataTypes) {
   var Message = sequelize.define("Message", {
@@ -17,7 +23,14 @@ module.exports = function(sequelize, DataTypes) {
   //       allowNull: false
   //     }
   //   });
+
+  //petah
+  module.exports = Message;
   
   return Message;
  
 };
+
+
+
+
