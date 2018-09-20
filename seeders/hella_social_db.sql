@@ -3,8 +3,8 @@
 
 USE hella_social_db;
 
-INSERT INTO Interests (name, category)
-VALUES ('Van Halen', 'music'),('Warriors','sports');
+-- INSERT INTO Interests (name, category)
+-- VALUES ('Van Halen', 'music'),('Warriors','sports');
 
 -- -- USERS TABLE
 -- CREATE TABLE users

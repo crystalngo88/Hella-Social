@@ -7,23 +7,23 @@ $("#message-submit").on("click", function(event) {
     // Make a newMessage object
     var newMessage = {
       user: $("#user").val().trim(),
-      body: $("#message-box").val().trim(),
-      created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+      message: $("#message-box").val().trim(),
     };
   
     console.log(newMessage);
   
     // Send an AJAX POST-request with jQuery
     $.post("/api/new", newMessage)
+  
       // On success, run the following code
-      .then(function() {
+      .then(function(newMessage) {
   
         var row = $("<div>");
         row.addClass("message");
   
         row.append("<p>" + newMessage.user + ": </p>");
-        row.append("<p>" + newMessage.body + "</p>");
-        row.append("<p>At " + moment(newMessage.created_at).format("h:mma on dddd") + "</p>");
+        row.append("<p>" + newMessage.message + "</p>");
+    
   
         $("#message-area").prepend(row);
   
@@ -35,8 +35,8 @@ $("#message-submit").on("click", function(event) {
   });
   
   // When the page loads, grab all of our messages
-  $.get("/api/all", function(data) {
-  
+  $.get("/api/all", function() {
+    Message.findAll({}).then(function (data) {
     if (data.length !== 0) {
   
       for (var i = 0; i < data.length; i++) {
@@ -45,8 +45,7 @@ $("#message-submit").on("click", function(event) {
         row.addClass("message");
   
         row.append("<p>" + data[i].user + " added... </p>");
-        row.append("<p>" + data[i].body + "</p>");
-        row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+        row.append("<p>" + data[i].message + "</p>");
   
         $("#message-area").prepend(row);
   
@@ -55,4 +54,5 @@ $("#message-submit").on("click", function(event) {
     }
   
   });
-  
+  });
+
