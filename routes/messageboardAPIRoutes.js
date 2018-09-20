@@ -5,6 +5,8 @@
 // Dependencies
 // =============================================================
 var addMessage = require("../public/js/addMessage");
+var Message = require("../models/message");
+
 
 
 // Routes
@@ -13,30 +15,32 @@ module.exports = function (app) {
 
     // Get all chirps
     app.get("/api/all", function (req, res) {
-
-        // Finding all Chirps, and then returning them to the user as JSON.
+    console.log(req)
+        // Finding all messages, and then returning them to the user as JSON.
         // Sequelize queries are asynchronous, which helps with perceived speed.
         // If we want something to be guaranteed to happen after the query, we'll use
         // the .then function
-        Message.findAll({}).then(function (results) {
+       Message.findAll({}).then(function (result) {
             // results are available to us inside the .then
-            res.json(results);
+            res.json(result);
         });
 
     });
 
-    // Add a chirp
+    // Add a message to message board
     app.post("/api/new", function (req, res) {
-
+//take the request
+        var message = req.body;
+        //not creating dynamic routes
         console.log("Message Data:");
-        console.log(req.body);
+        console.log('req.body',req.body);
 
+       //add a message to the database using sequelize 
         Message.create({
-            user: req.body.user,
-            body: req.body.body,
-            created_at: req.body.created_at
+            user: message.user,
+            message: message.message,
         }).then(function (results) {
-            // `results` here would be the newly created chirp
+            // `results` here would be the newly created message'post'
             res.end();
         });
 

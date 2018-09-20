@@ -1,1 +1,1 @@
-SELECT * FROM database_development.users;root
+SELECT * FROM database_development.users;
