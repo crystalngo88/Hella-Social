@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
-  Message.sync();
+  
   // Message.associate = function(models){
   //   Message.belongsTo(models.Interest, {
   //     foreignKey: {

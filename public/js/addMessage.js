@@ -16,13 +16,13 @@ $("#message-submit").on("click", function(event) {
     $.post("/api/new", newMessage)
   
       // On success, run the following code
-      .then(function(newMessage) {
-  
+      .then(function(data) {
+  console.log(data);
         var row = $("<div>");
         row.addClass("message");
   
-        row.append("<p>" + newMessage.user + ": </p>");
-        row.append("<p>" + newMessage.message + "</p>");
+        row.append("<p>" + data.user + ": </p>");
+        row.append("<p>" + data.message + "</p>");
     
   
         $("#message-area").prepend(row);
@@ -35,24 +35,24 @@ $("#message-submit").on("click", function(event) {
   });
   
   // When the page loads, grab all of our messages
-  $.get("/api/all", function() {
-    Message.findAll({}).then(function (data) {
-    if (data.length !== 0) {
+  // $.get("/api/all", function() {
+  //   Message.findAll({}).then(function (data) {
+  //   if (data.length !== 0) {
   
-      for (var i = 0; i < data.length; i++) {
+  //     for (var i = 0; i < data.length; i++) {
   
-        var row = $("<div>");
-        row.addClass("message");
+  //       var row = $("<div>");
+  //       row.addClass("message");
   
-        row.append("<p>" + data[i].user + " added... </p>");
-        row.append("<p>" + data[i].message + "</p>");
+  //       row.append("<p>" + data[i].user + " added... </p>");
+  //       row.append("<p>" + data[i].message + "</p>");
   
-        $("#message-area").prepend(row);
+  //       $("#message-area").prepend(row);
   
-      }
+  //     }
   
-    }
+  //   }
   
-  });
-  });
+  // });
+  // });
 
