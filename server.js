@@ -10,19 +10,19 @@ var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
 // 
-var mysql = require ('mysql');
-var connection;
+// var mysql = require ('mysql');
+// var connection;
 
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    host: 'p1us8ottbqwio8hv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    user: 'jl5lz8hk1d6b7xwo',
-    password: 'qruouk8hrwow8pzg',
-    database: '	ixioxxlp0tzchbfb'
-  });
-;}
+// if (process.env.JAWSDB_URL) {
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   connection = mysql.createConnection({
+//     host: 'p1us8ottbqwio8hv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+//     user: 'jl5lz8hk1d6b7xwo',
+//     password: 'qruouk8hrwow8pzg',
+//     database: 'ixioxxlp0tzchbfb'
+//   });
+// ;}
 // Creating express app and configuring middleware needed for authentication
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
